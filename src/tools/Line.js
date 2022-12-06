@@ -21,9 +21,9 @@ export class Line extends Tool {
       this.ctx.moveTo(this.currentX, this.currentY )
       this.saved = this.canvas.toDataURL()
       if (e.button === 2) {
-        this.ctx.strokeStyle = this.colorFill
+        this.ctx.strokeStyle = this.colorFill.color
       } else {
-        this.ctx.strokeStyle = this.colorStroke
+        this.ctx.strokeStyle = this.colorStroke.color
       }
     }
 

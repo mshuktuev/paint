@@ -3,6 +3,7 @@
 	import { writable } from 'svelte/store';
 	import { Circle } from '../tools/Circle';
 	import Eraser from '../tools/Eraser';
+	import { Fill } from '../tools/Fill';
 	import { Line } from '../tools/Line';
 	import { Pencel } from '../tools/Pencel';
 	import { Rect } from '../tools/Rect';
@@ -15,14 +16,14 @@
 	const tools = writable(null);
 	const toolName = writable('pencel');
 	const colors = writable({
-		fill: '#f00',
-		stroke: '#0f0',
+		fill: { color: '#194bff', r: 25, g: 75, b: 255, a: 255 },
+		stroke: { color: '#000000', r: 0, g: 0, b: 0, a: 255 },
 	});
 	const selectType = writable('stroke');
 
 	const strokeWidth = writable(1);
 
-	const toolsTypes = ['pencel', 'rect', 'circle', 'line', 'triangle', 'triangleCorner', 'eraser'];
+	const toolsTypes = ['pencel', 'rect', 'circle', 'line', 'triangle', 'triangleCorner', 'eraser', 'fill'];
 
 	const toolsSelect = {
 		pencel: Pencel,
@@ -32,6 +33,7 @@
 		triangle: Triangle,
 		triangleCorner: TriangleCorner,
 		eraser: Eraser,
+		fill: Fill,
 	};
 
 	function setTool(tool) {

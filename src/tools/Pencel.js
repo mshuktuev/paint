@@ -18,9 +18,9 @@ export class Pencel extends Tool {
 
       this.isDrawing = true
       if (e.button === 2) {
-        this.ctx.strokeStyle = this.colorFill
+        this.ctx.strokeStyle = this.colorFill.color
       } else {
-        this.ctx.strokeStyle = this.colorStroke
+        this.ctx.strokeStyle = this.colorStroke.color
       }
       this.ctx.beginPath()
       this.ctx.moveTo(e.pageX - e.target.offsetLeft, e.pageY - e.target.offsetTop)

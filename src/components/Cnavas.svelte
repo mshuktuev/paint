@@ -28,16 +28,6 @@
 		const ctx = canvasNode.getContext('2d');
 		ctx.fillStyle = 'white';
 		ctx.fillRect(0, 0, canvasNode.width, canvasNode.height);
-		window.onbeforeunload = function (evt) {
-			var message = 'Рисунок не сохранился, вы уверены что хотите закрыть страницу?';
-			if (typeof evt == 'undefined') {
-				evt = window.event;
-			}
-			if (evt) {
-				evt.returnValue = message;
-			}
-			return message;
-		};
 	});
 </script>
 

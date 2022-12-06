@@ -10,16 +10,16 @@
 
 <div class="colors">
 	<button class="color" class:selected={$selectType === 'stroke'} on:click={() => switchType('stroke')}>
-		<div class="prew" style="background: {$colors.stroke};">
-			{#if $colors.stroke === 'transparent'}
+		<div class="prew" style="background: {$colors.stroke.color};">
+			{#if $colors.stroke.color === 'transparent'}
 				<div class="line" />
 			{/if}
 		</div>
 		<div class="title">Stroke</div>
 	</button>
 	<button class="color" class:selected={$selectType === 'fill'} on:click={() => switchType('fill')}>
-		<div class="prew" style="background: {$colors.fill};">
-			{#if $colors.fill === 'transparent'}
+		<div class="prew" style="background: {$colors.fill.color};">
+			{#if $colors.fill.color === 'transparent'}
 				<div class="line" />
 			{/if}
 		</div>

@@ -6,9 +6,8 @@ export default class Tool {
 
         this.colorFill = colors.fill
         this.colorStroke = colors.stroke
-        this.ctx.strokeStyle = colors.stroke
-        this.ctx.fillStyle = colors.fill
-        console.log(strokeWidth);
+        this.ctx.strokeStyle = colors.stroke.color
+        this.ctx.fillStyle = colors.fill.color
         this.ctx.lineWidth = strokeWidth
         this.ctx.lineCap = "round";
 				this.ctx.lineJoin = "round";
