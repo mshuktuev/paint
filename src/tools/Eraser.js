@@ -7,13 +7,12 @@ export default class Eraser extends Pencel {
 
 
   draw(x, y) {
-    this.ctx.globalCompositeOperation = "destination-out";
+    this.ctx.strokeStyle = 'white';
     this.ctx.lineTo(x, y)
     this.ctx.stroke()
   }
   onMouseUp(e) {
     e.stopPropagation()
     this.isDrawing = false
-    this.ctx.globalCompositeOperation = "source-over";
   }
 }

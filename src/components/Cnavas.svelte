@@ -3,7 +3,6 @@
 
 	let canvasNode = null;
 	let wrapperNode = null;
-	let resizing = false;
 
 	const canvas = getContext('canvas');
 
