@@ -6,16 +6,16 @@
 	import Tools from './stores/Tools.svelte';
 
 	onMount(() => {
-		// window.onbeforeunload = function (evt) {
-		// 	var message = 'Рисунок не сохранился, вы уверены что хотите закрыть страницу?';
-		// 	if (typeof evt == 'undefined') {
-		// 		evt = window.event;
-		// 	}
-		// 	if (evt) {
-		// 		evt.returnValue = message;
-		// 	}
-		// 	return message;
-		// };
+		window.onbeforeunload = function (evt) {
+			var message = 'Рисунок не сохранился, вы уверены что хотите закрыть страницу?';
+			if (typeof evt == 'undefined') {
+				evt = window.event;
+			}
+			if (evt) {
+				evt.returnValue = message;
+			}
+			return message;
+		};
 	});
 </script>
 
